@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background-color: rgb(243, 233, 241);
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: rgb(143, 91, 254);
+    font-size: 2.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+#mentions_legales
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+}
+
+#mentions_legales h1
+{
+    text-align: center;
+    font-size: 1.7em;
+    text-decoration: underline;
+    padding-top: 50px;
+}
+
+#mentions_legales p, #mentions_legales h3
+{
+    text-align: center;
+}
+
+footer
+{
+    display: flex;
+    justify-content:space-between;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 55px;
+}
+
+footer a
+{
+    text-decoration: none;    
+}
+
+footer h2
+{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+footer h2:hover
+{
+    animation: wiggle 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wiggle 
+{
+    0% {transform:translate(1px, 1px) rotate(0deg);}
+    10% {transform:translate(-1px, -2px) rotate(-1deg);}
+    20% {transform:translate(-3px, 0px) rotate(1deg);}
+    30% {transform:translate(3px, 2px) rotate(0deg);}
+    40% {transform:translate(1px, -1px) rotate(1deg);}
+    50% {transform:translate(-1px, 2px) rotate(-1deg);}
+    60% {transform:translate(-3px, 1px) rotate(0deg);}
+    70% {transform:translate(3px, 1px) rotate(-1deg);}
+    80% {transform:translate(-1px, -1px) rotate(1deg);}
+    90% {transform:translate(1px, 2px) rotate(0deg);}
+    100% {transform:translate(1px, -2px) rotate(-1deg);}
+}

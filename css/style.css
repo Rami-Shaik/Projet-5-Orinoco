@@ -1,0 +1,151 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(243, 233, 241);
+    margin: 0;
+}
+
+/* HEADER */
+
+#logo_orinoco {
+    width: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header i {
+    font-size: 2.5em;
+    background: linear-gradient(to right, rgb(230, 138, 8), rgb(143, 91, 254));
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 50%;
+}
+
+header a {
+    margin-top: 1%;
+}
+
+/* SECTION */
+
+.module-border-wrap {
+    background: linear-gradient(to right, #E68A08, #8F5BFE);
+    padding: 3px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.module {
+    background: #F3E9F1;
+    color: white;
+    padding: 1em;
+}
+
+#presentation_orinoco {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section h1, section h2 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#E68A08), to(#8F5BFE));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8em;
+}
+
+#titre_presentation {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+section img {
+    height: 100%;
+}
+
+.module-border-wrap:nth-child(3) {
+    margin-top: 1%;
+}
+
+#articles {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#titre_article {
+    text-align: center;
+}
+
+#titre_article h2 {
+    font-size: 1.4em;
+}
+
+#listes {
+    border: 2px solid black;
+    height: 500px;
+    display: flex;
+}
+
+.liste_articles {
+    border: 2px solid black;
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer
+{
+    display: flex;
+    justify-content:space-between;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 55px;
+}
+
+footer a
+{
+    text-decoration: none;    
+}
+
+footer h3
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: -webkit-gradient(linear, left top, left bottom, from(#E68A08), to(#8F5BFE));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer h3:hover
+{
+    animation: wiggle 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wiggle 
+{
+    0% {transform:translate(1px, 1px) rotate(0deg);}
+    10% {transform:translate(-1px, -2px) rotate(-1deg);}
+    20% {transform:translate(-3px, 0px) rotate(1deg);}
+    30% {transform:translate(3px, 2px) rotate(0deg);}
+    40% {transform:translate(1px, -1px) rotate(1deg);}
+    50% {transform:translate(-1px, 2px) rotate(-1deg);}
+    60% {transform:translate(-3px, 1px) rotate(0deg);}
+    70% {transform:translate(3px, 1px) rotate(-1deg);}
+    80% {transform:translate(-1px, -1px) rotate(1deg);}
+    90% {transform:translate(1px, 2px) rotate(0deg);}
+    100% {transform:translate(1px, -2px) rotate(-1deg);}
+}
