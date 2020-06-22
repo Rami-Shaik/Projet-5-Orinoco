@@ -1,63 +1,58 @@
 body {
-    height: 100%;
-    width: 100%;
     background-color: rgb(243, 233, 241);
     margin: 0;
 }
 
 /* HEADER */
-
-#logo_orinoco {
-    width: 200px;
-}
-
 header {
     display: flex;
     justify-content: space-around;
 }
 
+#logo_orinoco {
+    width: 190px;
+}
+
 header i {
-    font-size: 2.5em;
+    font-size: 2em;
     background: linear-gradient(to right, rgb(230, 138, 8), rgb(143, 91, 254));
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 50%;
 }
 
 header a {
-    margin-top: 1%;
+    margin-top: auto;
+    margin-bottom: auto;    
 }
 
 /* SECTION */
-
 .module-border-wrap {
     background: linear-gradient(to right, #E68A08, #8F5BFE);
-    padding: 3px;
+    padding: 2.5px;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5%;
 }
 
 .module {
     background: #F3E9F1;
-    color: white;
-    padding: 1em;
+    /*color: white;*/
 }
 
 #presentation_orinoco {
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 200px;
+    height: 150px;
     display: flex;
-    justify-content: space-between;
 }
 
-section h1, section h2 {
+#presentation_orinoco div {
+    width: 100%;
+}
+
+section h1, section h2, section h3, h4, p {
     background: -webkit-gradient(linear, left top, left bottom, from(#E68A08), to(#8F5BFE));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.8em;
 }
 
 #titre_presentation {
@@ -65,40 +60,48 @@ section h1, section h2 {
     margin-top: auto;
 }
 
-section img {
-    height: 100%;
-}
-
-.module-border-wrap:nth-child(3) {
-    margin-top: 1%;
-}
-
-#articles {
-    width: 95%;
-    margin-right: auto;
-    margin-left: auto;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-}
-
-#titre_article {
+#titre_presentation h1 {
+    width: 100%;
     text-align: center;
 }
 
-#titre_article h2 {
-    font-size: 1.4em;
+#presentation_orinoco img {
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-#listes {
-    border: 2px solid black;
-    height: 500px;
+/* Section JS */
+
+#peluches img {
+    width: 150px;
+    height: 110px;
+    border: thick double rgb(253, 243, 251);
+    border-radius: 50%;
+}
+
+#peluches {
     display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.liste_articles {
-    border: 2px solid black;
+#peluches .module-border-wrap {
+    margin-left: 1%;
+    margin-right: 1%;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lienProduit {
+    display: block;
+    border: 0.1px solid transparent;
 }
 
 /* FOOTER */
@@ -111,11 +114,7 @@ footer
     bottom: 0px;
     width: 100%;
     height: 55px;
-}
-
-footer a
-{
-    text-decoration: none;    
+    font-size: 1.2em;
 }
 
 footer h3
@@ -148,4 +147,61 @@ footer h3:hover
     80% {transform:translate(-1px, -1px) rotate(1deg);}
     90% {transform:translate(1px, 2px) rotate(0deg);}
     100% {transform:translate(1px, -2px) rotate(-1deg);}
+}
+
+/* MEDIA QUERRIES */
+
+@media screen and (max-width:1023px) 
+{
+    #peluches {
+        flex-direction: column;
+        width: 60%;
+    }
+    
+    #peluches .module-border-wrap {
+        margin-bottom: 5%;
+    }
+    
+    footer {
+        position: static;
+    }
+    
+    footer h3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:425px) 
+{
+    #logo_orinoco {
+    width: 120px;
+    }
+    
+    header i {
+    font-size: 1.5em;
+    }
+    
+    #presentation_orinoco {
+        flex-direction: column;
+        justify-content: center;
+        height: 190px;
+    }
+    
+    #image_deux {
+        display: none;
+    }
+    
+    #presentation_orinoco img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #border_presentation {
+        width: 90%;
+    }
+    
+    footer h3 {
+        font-size: 0.9em;
+    }
 }
