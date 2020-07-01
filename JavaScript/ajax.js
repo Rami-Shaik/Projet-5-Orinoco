@@ -1,21 +1,14 @@
-const getTeddies = async function () {
-    try {
-        let response = await fetch('http://localhost:3000/api/teddies')
-        if (response.ok) {
-            let data = await response.json()
-            console.log(data)
-        } else {
-            console.error('Retour du serveur : ', response.status)
-        }
-    } catch (e) {
-        console.log(e)
-    }   
-}  
+console.log(window.location.href);
+/*
+localStorage.setItem('monChat', 'Tom');*/
 
+/*console.log(localStorage.getItem('monChat'));*/
 
+let cats = [{'name': 'Tom', 'age': 5}, {'name':'Fred', 'age':7}];
 
+localStorage.setItem('Chats', JSON.stringify(cats));
 
-
+console.log(JSON.parse(localStorage.getItem('Chats')));
 
 
 

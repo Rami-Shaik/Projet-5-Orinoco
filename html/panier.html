@@ -6,8 +6,73 @@
     <meta name="description" content="Résumé des produits dans votre panier, le prix total ainsi qu'un formulaire afin de passer commande chez Orinoco.">
     <title>Page panier Orinoco</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/f44d43024d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <a href="index.html">
+            <img id="logo_orinoco" src="../logo_orinoco.png" alt="logo Orinoco"/>
+        </a>
+        <a href="panier.html">
+        <div class="boutons">
+            <button class="panier" onclick='location.href="panier.html"' data-target="panier">Panier ( <span class="totalQté"></span> )</button>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+        </a>
+    </header>
     
+    
+    <div id="border_presentation" class="module-border-wrap"><div class="module">
+        <section id="presentation_orinoco">
+            <img src="../image_ours_peluche.png"/>
+            <div id="titre_presentation">
+                <h1>Ours en peluche Orinoco !</h1>
+            </div>
+            <img id="image_deux" src="../image_ours_peluche.png"/>
+        </section>
+    </div></div>
+    
+    <main>
+        <div id="basket"></div>
+         <div id="total"></div>
+  
+  
+    <form id="formulaire" >
+      <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="firstname">Prénom :</label>
+            <input type="text" name="firstName" class="form-control" id="firstname" placeholder="Votre prénom..." required><span id='oublisPrenom'></span><br>
+        </div>
+        <div class="form-group col-md-5">
+            <label for="name">Nom :</label>
+            <input type="text" name="lastName" class="form-control" id="name" placeholder="Votre nom..." required><span id='oublisNom'></span><br>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <label for="email">Email :</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Votre email@email.fr" required><span id='oublisEmail'></span><br>
+        </div>
+        <div class="form-group col-md-5">
+            <label for="address">Adresse :</label>
+            <input type="text" name="address" class="form-control" id="address" placeholder="6, Rue du Moulin" required><span id='oublisAdress'></span><br>
+        </div>
+    </div>
+        <div class="form-group col-md-8">
+            <label for="city">Ville :</label>
+            <input type="text" name="city" class="form-control" id="city" placeholder="Votre ville..." required><span id='oublisVille'></span><br>
+        </div>
+  
+      <button type="button" onclick="achat()" id="valider">Valider mon panier</button>
+     
+    </form>
+  
+    </main>
+     
+    <footer id="page_produit">
+        <h3><a href="mentions.html">Mentions légales</a></h3>
+        <h3><a href="mailto:orinoco.com">Contactez-nous</a></h3>
+    </footer>
+    <script src="../JavaScript/panier.js"></script>
 </body>
 </html>
